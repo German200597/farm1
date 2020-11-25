@@ -9,15 +9,15 @@ class Goat:
   def __init__(self, name, weight, sound = 'mee'):
     self.name = name
     self.weight = weight
-Horn = Goat('Рога', 2) 
-Hoof = Goat('Копыта', 10)
+Horn = Goat('Рога', 1) 
+Hoof = Goat('Копыта', 2)
 goat_list = [Horn, Hoof]
 
 class Goose:
   def __init__(self, name, weight, sound = 'grrr'):
     self.name = name
     self.weight = weight
-grey_goose = Goose('Серый', 3 )
+grey_goose = Goose('Серый', 9)
 white_goose = Goose('Белый', 4)
 goose_list = [grey_goose, white_goose]
 
@@ -25,7 +25,7 @@ class Sheep:
   def __init__(self, name, weight, sound = 'myaa'):
     self.name = name
     self.weight = weight 
-Barashek = Sheep('Кудрявый', 5)
+Barashek = Sheep('Кудрявый', 7)
 Kudryaviy = Sheep('Барашек', 6)
 sheep_list = [Barashek, Kudryaviy]
 
@@ -34,7 +34,7 @@ class Chick:
   def __init__(self, name, weight, sound = 'ku-ka-re-ku'):
     self.name = name
     self.weight = weight
-Koko = Chick('Koko', 7)
+Koko = Chick('Koko', 1)
 Kukareku = Chick('Кукареку', 8)
 chick_list = [Koko, Kukareku]
 
@@ -78,11 +78,13 @@ def sum_weight(name, animal_type):
 
 
 def max_weight(animal_type):
+  weight = 0
+  name = 0
   for i in animal_type:
-    weight = 0
-    if i.weight > weight:
-      weight = i.weight    
-  print(f'Самое тяжелое животное в этой категории: {weight}')   
+    if weight < i.weight :
+      weight = i.weight
+      name = i.name
+  print(f'Самое тяжелое животное в этой категории: {name}')    
   
 sum_weight('коров', сow_list) 
 sum_weight('гусей', goose_list)
@@ -97,50 +99,3 @@ max_weight(duck_list)
 max_weight(sheep_list)
 max_weight(chick_list) 
 max_weight(goat_list)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-
-
-
-
-
-#  
-  
-  
-
-
-
-

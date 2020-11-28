@@ -1,6 +1,3 @@
-def sound(self):
-  print(f'{self.name} подает голос: {self.sound}')
-
 class Animal:
   def __init__(self, name, weight):
     self.name = name
